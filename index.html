@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio Aina</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== 1. HEADER ===== -->
+  <header class="header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1>Portofolio Aina</h1>
+        <p class="tagline">Belajar, berkarya, dan berbagi cerita</p>
+      </div>
+
+      <!-- Form pencarian -->
+      <form class="search-form" action="#" method="get">
+        <input type="text" name="q" placeholder="Cari artikel...">
+        <button type="submit">Cari</button>
+      </form>
+    </div>
+  </header>
+
+  <!-- ===== 2. MENU NAVIGASI ===== -->
+  <nav class="menu">
+    <div class="container">
+      <ul>
+        <li><a href="#" class="active">Beranda</a></li>
+        <li><a href="#">Tentang Saya</a></li>
+        <li><a href="#">Portofolio</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Kontak</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===== 3. IMAGE SLIDER ===== -->
+  <section class="container">
+    <div class="slider">
+      <div class="slide active">
+        <img src="images/gambar1.jpg" alt="Gambar 1">
+        <div class="caption">Karya Pertama: Hutanku yang Indah</div>
+      </div>
+      <div class="slide">
+        <img src="images/crayon.jpg" alt="Gambar 2">
+        <div class="caption">Karya Kedua: Belajar Mewarna</div>
+      </div>
+      <div class="slide">
+        <img src="images/foreverzoro.jpg" alt="Gambar 3">
+        <div class="caption">Karya Ketiga: anime dikit</div>
+      </div>
+
+      <!-- Tombol sebelumnya / berikutnya -->
+      <button class="nav-btn prev" id="prevBtn">&#10094;</button>
+      <button class="nav-btn next" id="nextBtn">&#10095;</button>
+
+      <!-- Titik penunjuk -->
+      <div class="dots" id="dots"></div>
+    </div>
+  </section>
+
+  <!-- ===== 4. KONTEN UTAMA (artikel + sidebar) ===== -->
+  <div class="container layout">
+
+    <!-- Daftar artikel (kolom tengah/kiri) -->
+    <main class="content">
+      <h2 class="section-title">Artikel Terbaru</h2>
+
+      <article class="post">
+        <img src="images/moge.jpg" alt="Artikel 1">
+        <div class="post-body">
+          <h3><a href="#">Proyek Pertamaku: Membuat Website</a></h3>
+          <p class="meta">20 Oktober 2026 &bull; Oleh Admin &bull; Kategori: Web</p>
+          <p>Ini adalah ringkasan artikel pertama. Ceritakan di sini bagaimana kamu mulai belajar membuat website dengan HTML dan CSS...</p>
+          <a href="#" class="read-more">Baca selengkapnya &raquo;</a>
+        </div>
+      </article>
+
+      <article class="post">
+        <img src="https://picsum.photos/id/180/300/200" alt="Artikel 2">
+        <div class="post-body">
+          <h3><a href="#">Belajar Desain dengan Warna dan Tipografi</a></h3>
+          <p class="meta">15 Oktober 2026 &bull; Oleh Admin &bull; Kategori: Desain</p>
+          <p>Ini adalah ringkasan artikel kedua. Warna dan jenis huruf sangat berpengaruh terhadap tampilan sebuah halaman...</p>
+          <a href="#" class="read-more">Baca selengkapnya &raquo;</a>
+        </div>
+      </article>
+
+      <article class="post">
+        <img src="https://picsum.photos/id/119/300/200" alt="Artikel 3">
+        <div class="post-body">
+          <h3><a href="#">Tips Menyusun Portofolio yang Menarik</a></h3>
+          <p class="meta">10 Oktober 2026 &bull; Oleh Admin &bull; Kategori: Tips</p>
+          <p>Ini adalah ringkasan artikel ketiga. Pilih karya terbaik, beri penjelasan singkat, dan susun dengan rapi...</p>
+          <a href="#" class="read-more">Baca selengkapnya &raquo;</a>
+        </div>
+      </article>
+    </main>
+
+    <!-- ===== 5. SIDEBAR ===== -->
+    <aside class="sidebar">
+
+      <div class="widget">
+        <h3>Profil Singkat</h3>
+        <p>Bagian ini kita isi dengan perkenalan singkat tentang diri kita. Bisa disebutkan tentang kelebihan dan ketertarikan kita terhadap suatu pekerjaan atau hoby.</p>
+      </div>
+
+      <div class="widget">
+        <h3>Kategori</h3>
+        <ul>
+          <li><a href="#">Web (5)</a></li>
+          <li><a href="#">Desain (3)</a></li>
+          <li><a href="#">Tips (2)</a></li>
+          <li><a href="#">Pengalaman (4)</a></li>
+        </ul>
+      </div>
+
+      <div class="widget">
+        <h3>Artikel Populer</h3>
+        <ul>
+          <li><a href="#">Mengenal HTML dan CSS</a></li>
+          <li><a href="#">Cara Membuat Slider Gambar</a></li>
+          <li><a href="#">Belajar JavaScript Dasar</a></li>
+        </ul>
+      </div>
+
+      <div class="widget">
+        <h3>Tautan Lain</h3>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">GitHub</a></li>
+          <li><a href="#">YouTube</a></li>
+        </ul>
+      </div>
+
+    </aside>
+  </div>
+
+  <!-- ===== 6. FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Aina Damayunita, M.Kom. Hak cipta dilindungi.</p>
+      <p> MAN Insan Cendekia Kota Palangka Raya</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

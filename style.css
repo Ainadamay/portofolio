@@ -1,0 +1,300 @@
+/* ===== PENGATURAN DASAR ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;   /* lebar elemen sudah termasuk padding & border */
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f2f4f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: #1e6fd9;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Pembungkus agar isi website rapi di tengah */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ===== 1. HEADER ===== */
+.header {
+  background-color: #12355b;
+  color: white;
+  padding: 25px 0;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.brand h1 {
+  font-size: 32px;
+}
+
+.tagline {
+  font-size: 14px;
+  color: #bcd4f0;
+}
+
+.search-form {
+  display: flex;
+}
+
+.search-form input {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  width: 200px;
+}
+
+.search-form button {
+  padding: 8px 15px;
+  border: none;
+  background-color: #f5a623;
+  color: white;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+}
+
+.search-form button:hover {
+  background-color: #d98e12;
+}
+
+/* ===== 2. MENU ===== */
+.menu {
+  background-color: #1e6fd9;
+}
+
+.menu ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.menu a {
+  display: block;
+  padding: 14px 20px;
+  color: white;
+  font-weight: bold;
+}
+
+.menu a:hover,
+.menu a.active {
+  background-color: #12355b;
+}
+
+/* ===== 3. IMAGE SLIDER ===== */
+.slider {
+  position: relative;
+  margin-top: 20px;
+  height: 350px;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #000;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;                      /* sembunyikan */
+  transition: opacity 0.8s ease;   /* efek perlahan muncul */
+}
+
+.slide.active {
+  opacity: 1;                      /* hanya slide aktif yang terlihat */
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;               /* gambar memenuhi kotak tanpa gepeng */
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 12px 20px;
+  background: rgba(0, 0, 0, 0.55);
+  color: white;
+  font-size: 18px;
+}
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 10px 14px;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.nav-btn:hover {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.dots {
+  position: absolute;
+  bottom: 55px;
+  width: 100%;
+  text-align: center;
+  z-index: 5;
+}
+
+.dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 4px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: #f5a623;
+}
+
+/* ===== 4. LAYOUT: ARTIKEL + SIDEBAR ===== */
+.layout {
+  display: flex;          /* membuat dua kolom berdampingan */
+  gap: 25px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.content {
+  flex: 3;                /* lebar kolom artikel = 3 bagian */
+}
+
+.sidebar {
+  flex: 1;                /* lebar sidebar = 1 bagian */
+}
+
+.section-title {
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 3px solid #1e6fd9;
+}
+
+/* ===== ARTIKEL ===== */
+.post {
+  display: flex;
+  gap: 18px;
+  background: white;
+  padding: 15px;
+  margin-bottom: 18px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.post img {
+  width: 200px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.post-body h3 a {
+  color: #12355b;
+}
+
+.post-body h3 a:hover {
+  color: #1e6fd9;
+}
+
+.meta {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 8px;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 8px;
+  font-weight: bold;
+}
+
+/* ===== 5. SIDEBAR ===== */
+.widget {
+  background: white;
+  padding: 15px;
+  margin-bottom: 18px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.widget h3 {
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #f5a623;
+  font-size: 17px;
+}
+
+.widget li {
+  padding: 6px 0;
+  border-bottom: 1px dashed #ddd;
+}
+
+.widget li:last-child {
+  border-bottom: none;
+}
+
+/* ===== 6. FOOTER ===== */
+.footer {
+  background-color: #12355b;
+  color: #bcd4f0;
+  text-align: center;
+  padding: 25px 0;
+  font-size: 14px;
+}
+
+/* ===== RESPONSIF (tampilan HP/tablet) ===== */
+@media (max-width: 800px) {
+  .layout {
+    flex-direction: column;   /* kolom ditumpuk ke bawah */
+  }
+
+  .post {
+    flex-direction: column;
+  }
+
+  .post img {
+    width: 100%;
+    height: 180px;
+  }
+
+  .slider {
+    height: 220px;
+  }
+
+  .search-form input {
+    width: 150px;
+  }
+}
